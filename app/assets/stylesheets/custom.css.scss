@@ -7,6 +7,9 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+a {
+  text-decoration: none;
+}
 light {
   font-weight: 200;
 }
@@ -42,5 +45,58 @@ aside {
     color: $light-teal;
     line-height: 30px;
     margin-top: 10px;
+  }
+  nav {
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    margin-top: Calc(110px - 85px);
+    width: Calc(100% - 100px);
+    ul {
+      font-size: 14px;
+      list-style-type: none;
+      padding: 0px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      li {
+        padding: 18px 0;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        &:last-child {
+          border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+  footer {
+    position: absolute;
+    width: Calc(100% - 100px);
+    bottom: 15px;
+    color: $light-teal;
+    ul.icons {
+      font-size: 42px;
+      margin-bottom: 20px;
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: inline;
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        & a:link, & a:visited, & a:active {
+          color: $light-teal;
+          -webkit-transition: color 200ms; /* Safari */
+          transition: color 200ms;
+        }
+        &:hover, & a:hover {
+          color: #fff;
+        }
+      }
+    }
+    copyright {
+      font-size: 12px;
+    }
   }
 }
