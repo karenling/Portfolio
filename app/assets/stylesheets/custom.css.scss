@@ -1,0 +1,25 @@
+$light-teal: #c3e8e3;
+$text-color: #a2a2a2;
+
+body {
+  font: 16px 'Lato';
+  color: $text-color;
+}
+aside {
+  width: 375px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/bg.jpg');
+  background-size: 375px;
+
+  .profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    background-image: url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/profile_image.jpg');
+    background-size: 100%;
+    margin: auto auto;
+  }
+}
