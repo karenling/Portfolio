@@ -4,15 +4,23 @@ $text-color: #a2a2a2;
 body {
   font: 16px 'Lato';
   color: $text-color;
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+light {
+  font-weight: 200;
 }
 aside {
-  width: 375px;
+  width: Calc(375px - 100px);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   background-image: url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/bg.jpg');
   background-size: 375px;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
 
   .profile-image {
     width: 160px;
@@ -21,5 +29,18 @@ aside {
     background-image: url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/profile_image.jpg');
     background-size: 100%;
     margin: auto auto;
+  }
+  .hi {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin-top: 30px;
+  }
+  .desc {
+    font-size: 18px;
+    color: $light-teal;
+    line-height: 30px;
+    margin-top: 10px;
   }
 }
