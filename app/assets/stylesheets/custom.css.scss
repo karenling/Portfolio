@@ -117,8 +117,15 @@ hr.divider {
           font-weight: 400;
           color: rgba(255, 255, 255, 0.95);
         }
+        .icons {
+          margin-top: 10px;
+          img {
+            height: 25px;
+            margin-right: 10px;
+          }
+        }
         .body {
-          margin-top: 30px;
+          margin-top: 10px;
           font-size: 14px;
           line-height: 24px;
         }
