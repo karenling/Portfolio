@@ -27,7 +27,7 @@ $(document).ready(function(){
 
   $('.mail').click(function () {
     $('html, body').animate({
-      scrollTop: $('.contact').offset().top
+      scrollTop: $(window).height() * 4
     }, 1000);
   });
 
@@ -73,7 +73,7 @@ $(document).ready(function(){
         }
       } else {
         $('.main').css('position', 'absolute');
-        $('.main').css('top', windowHeight*3);
+        $('.main').css('top', windowHeight * 3);
       }
     });
 
