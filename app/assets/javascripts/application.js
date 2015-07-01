@@ -48,8 +48,8 @@ $(document).ready(function(){
       if (currentPos < windowHeight * 3) { // IMPORTANT TO SET THIS TO THE NUMBER OF IMAGES THERE ARE
         $('.main').css('position', 'fixed');
         if (currentPos >= 0 && currentPos < windowHeight) {
-
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_1.jpg')");
+          $('.description').html("hello there!");
         } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_2.jpg')");
         } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {

@@ -68,17 +68,23 @@ hr.divider {
       margin-left: -50%;
     }
     .portfolio {
-      position: relative;
+      position: absolute;;
       top: 7.438%;
       left: 13.3%;
       width: 74%;
-      height: 500px;
+      height: 83%;
       background-size: 100%;
       background-repeat: no-repeat;
       -webkit-transition: background-image 600ms; /* Safari */
       transition: background-image 600ms;
-
-
+    }
+    .description {
+      position: absolute;;
+      top: 7.438%;
+      left: 13.3%;
+      width: 74%;
+      height: 83%;
+      background-color: rgba(0, 0, 0, 0.8);
     }
   }
 }
