@@ -34,6 +34,7 @@ hr.divider {
   left: 375px;
   padding: 0;
   width: Calc(100% - 375px);
+  min-width: 675px;
   -webkit-transition: position 10s; /* Safari */
   transition: position 10s;
   .recent-post {
@@ -56,6 +57,7 @@ hr.divider {
     top: -4000px;
   }
   .work {
+    min-height: 450px;
     position: relative;
     // background: red;
     margin: auto auto;
@@ -199,6 +201,7 @@ hr.divider {
   }
 }
 aside {
+  min-height: 450px;
   width: Calc(375px - 100px);
   position: fixed;
   top: 0;
@@ -231,28 +234,6 @@ aside {
     color: $light-teal;
     line-height: 30px;
     margin-top: 10px;
-  }
-  nav {
-    height: 170px;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    margin-top: Calc(110px - 85px);
-    width: Calc(100% - 100px);
-    ul {
-      font-size: 14px;
-      list-style-type: none;
-      padding: 0px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      li {
-        padding: 18px 0;
-        border-top: 2px solid rgba(255, 255, 255, 0.2);
-        &:last-child {
-          border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        }
-      }
-    }
   }
   footer {
     position: absolute;

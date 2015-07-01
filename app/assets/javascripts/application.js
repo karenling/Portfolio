@@ -25,6 +25,12 @@ $(document).ready(function(){
   //  dots: true
   // });
 
+  $('.mail').click(function () {
+    $('html, body').animate({
+      scrollTop: $('.contact').offset().top
+    }, 1000);
+  });
+
   $(window).resize(function () {
     // var windowWidth = $(window).width();
     // var mainWidth = windowWidth - 375 - 200;
