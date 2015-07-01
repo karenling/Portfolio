@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+  $('.work').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  });
+
+  $(window).resize(function () {
+    var windowWidth = $(window).width();
+    var mainWidth = windowWidth - 375 - 200;
+
+    $('.work, .work div').css('width', mainWidth);
+  })
+
+  $(window).resize();
+
+
+});
