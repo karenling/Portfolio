@@ -1,18 +1,17 @@
 <div class="contact">
+  <div class="container">
+    <div class="title">Get In Touch</div>
+    <hr class="divider"/>
+    <form class="message-form">
+      <div class="notice"></div>
+      <div class="errors"></div>
+      <input type="hidden" name="authenticity-token" value="form_authenticity_token">
+      <input type="text" id="message-name" name="message[name]" value="<%= @message.name %>" placeholder='Name'><input type="text" id="message-email" name="message[email]" value="<%= @message.email %>" placeholder='Email'>
+      <textarea id="message-body" name="message[body]" placeholder="Message"><%= @message.body %></textarea>
 
-  <% if flash[:errors] %>
-    <%= flash[:errors] %>
-    <% end %>
-  <div class="title">Get In Touch</div>
-  <hr class="divider"/>
-  <form class="message-form">
-    <div class="notice"></div>
-    <div class="errors"></div>
-    <input type="hidden" name="authenticity-token" value="form_authenticity_token">
-    <input type="text" id="message-name" name="message[name]" value="<%= @message.name %>" placeholder='Name'><input type="text" id="message-email" name="message[email]" value="<%= @message.email %>" placeholder='Email'>
-    <textarea id="message-body" name="message[body]" placeholder="Message"><%= @message.body %></textarea>
-
-    <input type="submit" class="submit-message" value="Send Message">
+      <input type="submit" class="submit-message" value="Send Message">
+    </form>
+  </div>
 </div>
 
 
