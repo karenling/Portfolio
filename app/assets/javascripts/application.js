@@ -47,16 +47,31 @@ $(window).load(function(){
         $('.work').hide();
         $('.portfolio-1').show();
         $('.work').css('width', 'Calc(100% - 375px - 200px)');
+        if (currentPos > windowHeight/5 && currentPos < windowHeight * 4/5) {
+          $('.description').addClass('make-opaque');
+        } else {
+          $('.description').removeClass('make-opaque');
+        }
       } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
 
         $('.work').hide();
         $('.portfolio-2').show();
         $('.work').css('width', 'Calc(100% - 375px - 200px)');
+        if (currentPos > (windowHeight + windowHeight/5) && currentPos < (windowHeight + windowHeight * 4/5)) {
+          $('.description').addClass('make-opaque');
+        } else {
+          $('.description').removeClass('make-opaque');
+        }
       } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
 
         $('.work').hide();
         $('.portfolio-3').show();
         $('.work').css('width', 'Calc(100% - 375px - 200px)');
+        if (currentPos > (windowHeight*2 + windowHeight/5) && currentPos < (windowHeight*2 + windowHeight * 4/5)) {
+          $('.description').addClass('make-opaque');
+        } else {
+          $('.description').removeClass('make-opaque');
+        }
       } else {
         $('.work').css('position', 'absolute');
         $('.work').css('top', windowHeight * 3);
@@ -74,7 +89,7 @@ $(window).load(function(){
           }
           $('html, body').animate({
             scrollTop: scrollPos += increment
-          }, 100);
+          }, 1000);
         })
 
         $('.mail').click(function () {

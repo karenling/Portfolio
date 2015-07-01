@@ -91,6 +91,7 @@ hr.divider {
         opacity: 0.9;
       }
     }
+
     .description {
       opacity: 0;
       position: absolute;
@@ -140,7 +141,11 @@ hr.divider {
         }
       }
     }
+    .make-opaque {
+      opacity: 0.9;
+    }
   }
+
 
   .down-arrow {
     position: fixed;
