@@ -46,23 +46,22 @@ $(window).load(function(){
 
     $(window).scroll(function () {
       var currentPos = $('body').scrollTop();
-      if (currentPos < windowHeight) {
+      $('.laptop').height(laptopWidth / 1.74);
+      if (currentPos < windowHeight * 3) {
         $('.work').css('position', 'fixed');
         $('.work').css('top', 0);
-        $('.laptop').height(laptopWidth / 1.74);
+      }
+      if (currentPos < windowHeight) {
+
         $('.work').hide();
         $('.portfolio-1').show();
         $('.work').css('width', 'Calc(100% - 375px - 200px)');
       } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
-        $('.work').css('position', 'fixed');
-        $('.work').css('top', 0);
-        $('.laptop').height(laptopWidth / 1.74);
+
         $('.work').hide();
         $('.portfolio-2').show();
         $('.work').css('width', 'Calc(100% - 375px - 200px)');
       } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
-        $('.work').css('position', 'fixed');
-        $('.work').css('top', 0);
 
         $('.work').hide();
         $('.portfolio-3').show();
