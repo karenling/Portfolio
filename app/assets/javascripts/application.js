@@ -45,18 +45,24 @@ $(document).ready(function(){
 
     $(window).scroll(function () {
       var currentPos = $('body').scrollTop();
-      $('.work').css('position', 'fixed');
       if (currentPos < windowHeight) {
+        $('.work').css('position', 'fixed');
+        $('.work').css('top', 0);
         $('.work').hide();
         $('.portfolio-1').show();
       } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
+        $('.work').css('position', 'fixed');
+        $('.work').css('top', 0);
         $('.work').hide();
         $('.portfolio-2').show();
       } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
+        $('.work').css('position', 'fixed');
+        $('.work').css('top', 0);
         $('.work').hide();
         $('.portfolio-3').show();
       } else {
         $('.work').css('position', 'absolute');
+        $('.work').css('top', windowHeight * 3);
       }
     })
     //
