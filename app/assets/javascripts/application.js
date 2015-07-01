@@ -16,7 +16,7 @@
 //= require_tree .
 //= require jquery.serializejson
 
-$(document).ready(function(){
+$(window).load(function(){
   // $('.work').slick({
   //   slidesToShow: 1,
   //   slidesToScroll: 1,
@@ -27,18 +27,19 @@ $(document).ready(function(){
 
 
 
-  window.setInterval(function () {
-    $('.down-arrow').toggleClass('shift-down');
-  }, 300);
+  // window.setInterval(function () {
+  //   $('.down-arrow').toggleClass('shift-down');
+  // }, 300);
 
   $(window).resize(function () {
-
+    var windowWidth = $(window).width();
     var windowHeight = $(window).height();
     $('.work').height(windowHeight);
     $('.contact').height(windowHeight - 200);
     $('body').height(windowHeight*4); // SET THIS
     $('.contact').css('top', windowHeight*4);
 
+    $('.laptop').width(windowWidth - 375 - 100);
     var laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
     $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
@@ -48,21 +49,28 @@ $(document).ready(function(){
       if (currentPos < windowHeight) {
         $('.work').css('position', 'fixed');
         $('.work').css('top', 0);
+        $('.laptop').height(laptopWidth / 1.74);
         $('.work').hide();
         $('.portfolio-1').show();
+        $('.work').css('width', 'Calc(100% - 375px - 200px)');
       } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
         $('.work').css('position', 'fixed');
         $('.work').css('top', 0);
+        $('.laptop').height(laptopWidth / 1.74);
         $('.work').hide();
         $('.portfolio-2').show();
+        $('.work').css('width', 'Calc(100% - 375px - 200px)');
       } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
         $('.work').css('position', 'fixed');
         $('.work').css('top', 0);
+
         $('.work').hide();
         $('.portfolio-3').show();
+        $('.work').css('width', 'Calc(100% - 375px - 200px)');
       } else {
         $('.work').css('position', 'absolute');
         $('.work').css('top', windowHeight * 3);
+        $('.work').css('width', 'Calc(100% - 200px)');
       }
     })
     //
