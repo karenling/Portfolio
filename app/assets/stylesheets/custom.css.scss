@@ -24,8 +24,9 @@ light {
 }
 hr.divider {
   height: 2px;
+  width: 300px;
   border: 0;
-  background-color: #efefef;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .main {
   position: absolute;
@@ -129,7 +130,19 @@ hr.divider {
     padding: 100px;
     background-color: #222;
     text-align: center;
+    .notice {
+      display: none;
+      padding-top: 10px;
+      font-size: 14px;
+      color: $light-teal;
 
+    }
+    .errors {
+      display: none;
+      padding-top: 10px;
+      font-size: 14px;
+      color: red;
+    }
     .title {
       font-size: 36px;
       text-transform: uppercase;
@@ -147,6 +160,7 @@ hr.divider {
       color: #fff;
     }
     input#message-name, input#message-email {
+      margin-top: 25px;
       width: 222px;
     }
     input#message-name {

@@ -1,7 +1,10 @@
 <div class="contact">
 
   <div class="title">Get In Touch</div>
+  <hr class="divider"/>
   <form class="message-form">
+    <div class="notice"></div>
+    <div class="errors"></div>
     <input type="hidden" name="authenticity-token" value="form_authenticity_token">
     <input type="text" id="message-name" name="message[name]" value="<%= @message.name %>" placeholder='Name'><input type="text" id="message-email" name="message[email]" value="<%= @message.email %>" placeholder='Email'>
     <textarea id="message-body" name="message[body]" placeholder="Message"><%= @message.body %></textarea>
@@ -13,6 +16,7 @@
 <script type="text/javascript">
   $('.message-form').on('submit', function (event) {
     event.preventDefault();
+    $('.notice, .errors').fadeOut();
     $('.submit-message').prop('disabled', true);
     var formData = $(event.currentTarget).serializeJSON();
 
@@ -23,10 +27,21 @@
       data: formData,
       success: function (response) {
         console.log(response);
+        $('.submit-message').prop('disabled', false);
+        $('.message-form input#message-name, .message-form input#message-email, .message-form textarea').val("");
+        $('.notice').fadeIn();
+        $('.notice').html("Thank you, " + response.name + ". Message sent!");
       },
       error: function (response) {
         console.log(response)
+        $('.submit-message').prop('disabled', false);
+        $('.errors').fadeIn();
+        $('.errors').html(response.responseJSON.join(". "));
       }
     });
+
+    function handleSuccess (response) {
+
+    }
   });
 </script>
