@@ -1,9 +1,10 @@
 <div class="contact">
+
+  <div class="title">Get In Touch</div>
   <form class="message-form">
     <input type="hidden" name="authenticity-token" value="form_authenticity_token">
-    <input type="text" name="message[name]" value="<%= @message.name %>">
-    <input type="text" name="message[email]" value="<%= @message.email %>">
-    <textarea name="message[body]"><%= @message.body %></textarea>
+    <input type="text" id="message-name" name="message[name]" value="<%= @message.name %>" placeholder='Name'><input type="text" id="message-email" name="message[email]" value="<%= @message.email %>" placeholder='Email'>
+    <textarea id="message-body" name="message[body]" placeholder="Message"><%= @message.body %></textarea>
 
     <input type="submit" class="submit-message" value="Send Message">
 </div>

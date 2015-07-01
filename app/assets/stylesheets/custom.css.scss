@@ -125,8 +125,54 @@ hr.divider {
     top: 300%;
     bottom: 0px;
     height: 97%;
-    width: 100%;
-    background-color: #333;
+    width: Calc(100% - 200px);
+    padding: 100px;
+    background-color: #222;
+    text-align: center;
+
+    .title {
+      font-size: 36px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 25px;
+    }
+    input#message-name, input#message-email, textarea#message-body {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 0;
+      padding: 16px;
+      font-size: 16px;
+      font-family: 'Lato';
+      font-weight: 400;
+      color: #fff;
+    }
+    input#message-name, input#message-email {
+      width: 222px;
+    }
+    input#message-name {
+      margin-right: 25px;
+      margin-left: 1px;
+    }
+    textarea#message-body {
+      display: block;
+      margin: auto auto;
+      width: 500px;
+      height: 100px;
+      margin-top: 25px;
+    }
+    .submit-message {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 0;
+      color: #fff;
+      padding: 10px 30px;
+      background: #86d3c9;
+      font: 14px 'Lato';
+      margin-top: 25px;
+      &:hover {
+        background: $light-teal;
+      }
+    }
   }
 }
 aside {
