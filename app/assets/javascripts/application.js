@@ -35,13 +35,30 @@ $(document).ready(function(){
 
     var windowHeight = $(window).height();
     $('.work').height(windowHeight);
+    $('.contact').height(windowHeight - 200);
     $('body').height(windowHeight*4); // SET THIS
+    $('.contact').css('top', windowHeight*4);
 
     var laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
     $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
 
-
+    $(window).scroll(function () {
+      var currentPos = $('body').scrollTop();
+      $('.work').css('position', 'fixed');
+      if (currentPos < windowHeight) {
+        $('.work').hide();
+        $('.portfolio-1').show();
+      } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
+        $('.work').hide();
+        $('.portfolio-2').show();
+      } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
+        $('.work').hide();
+        $('.portfolio-3').show();
+      } else {
+        $('.work').css('position', 'absolute');
+      }
+    })
     //
     // $(window).scroll(function () {
     //   var currentPos = $('body').scrollTop();

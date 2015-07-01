@@ -56,12 +56,14 @@ hr.divider {
     left: -4000px;
     top: -4000px;
   }
+
   .work {
     min-height: 450px;
-    position: relative;
-    // background: red;
+    position: fixed;
+    top: 0px;
+    right: 50px;
     margin: auto auto;
-    width: Calc(100% - 200px);
+    width: Calc(100% - 375px - 200px);
     padding: 0 50px;
     // background-color: red;
     .laptop {
@@ -75,7 +77,7 @@ hr.divider {
       margin-left: -50%;
     }
     .portfolio {
-      position: absolute;;
+      position: absolute;
       top: 7.3%;
       left: 13%;
       width: 74%;
@@ -183,9 +185,7 @@ hr.divider {
   }
   .contact {
     position: absolute;
-    top: 100%;
-    bottom: 0px;
-    height: Calc(100% - 184px); // not sure where the remaining 6px is
+    bottom: 0px; // not sure where the remaining 6px is
     width: Calc(100% - 200px);
     padding: 100px;
     background-color: #222;
