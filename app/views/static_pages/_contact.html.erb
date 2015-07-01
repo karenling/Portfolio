@@ -1,9 +1,31 @@
 <div class="contact">
-  <form action="" method="POST">
+  <form class="message-form">
     <input type="hidden" name="authenticity-token" value="form_authenticity_token">
     <input type="text" name="message[name]" value="<%= @message.name %>">
     <input type="text" name="message[email]" value="<%= @message.email %>">
-    <textarea name="message[body]"><%= @contact.value %></textarea>
+    <textarea name="message[body]"><%= @message.body %></textarea>
 
-    <input type="submit" value="Send Message">
+    <input type="submit" class="submit-message" value="Send Message">
 </div>
+
+
+<script type="text/javascript">
+  $('.message-form').on('submit', function (event) {
+    event.preventDefault();
+    $('.submit-message').prop('disabled', true);
+    var formData = $(event.currentTarget).serializeJSON();
+
+    $.ajax({
+      type: "POST",
+      url: "/messages",
+      dataType: "json",
+      data: formData,
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (response) {
+        console.log(response)
+      }
+    });
+  });
+</script>

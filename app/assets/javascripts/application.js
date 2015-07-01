@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.serializejson
 
 $(document).ready(function(){
   // $('.work').slick({
@@ -58,7 +59,7 @@ $(document).ready(function(){
           $('.portfolio').html("<div class='description'><div class='content'><div class='title'><a href='https://github.com/karenling/chess'>Ruby Chess <i class='fa fa-external-link'></i></a></div> <div class='body'>Terminal chess implementation, written in Ruby. &nbsp;<a href='https://github.com/karenling/chess'><i class='fa fa-github'></i></a></div></div></div>");
         }
       } else {
-        $('.main').css('position', 'relative');
+        $('.main').css('position', 'absolute');
       }
     });
 
