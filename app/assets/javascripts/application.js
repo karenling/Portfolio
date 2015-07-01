@@ -31,6 +31,11 @@ $(document).ready(function(){
     }, 1000);
   });
 
+  window.setInterval(function () {
+    $('.down-arrow').toggleClass('shift-down');
+    // $('.down-arrow').removeClass('shift-down');
+  }, 300);
+
   $(window).resize(function () {
     // var windowWidth = $(window).width();
     // var mainWidth = windowWidth - 375 - 200;
