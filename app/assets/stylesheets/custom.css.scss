@@ -47,15 +47,12 @@ hr.divider {
       @include grey-border-button;
     }
   }
-  .work {
-
-  }
   .preload {
     position: absolute;
     left: -4000px;
     top: -4000px;
   }
-  .work2 {
+  .work {
     position: relative;
     // background-color: red;
     .laptop {
@@ -67,9 +64,6 @@ hr.divider {
       top: 50%;
       left: 50%;
       margin-left: -50%;
-      &:hover .description {
-        opacity: 1;
-      }
     }
     .portfolio {
       position: absolute;;
@@ -81,15 +75,17 @@ hr.divider {
       background-repeat: no-repeat;
       -webkit-transition: background-image 600ms; /* Safari */
       transition: background-image 600ms;
-
+      &:hover .description {
+        opacity: 0.9;
+      }
     }
     .description {
       opacity: 0;
-      position: absolute;;
-      top: 7.438%;
-      left: 13.3%;
-      width: 74%;
-      height: 83%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
       color: rgba(255, 255, 255, 0.9);
       -webkit-transition: opacity 600ms; /* Safari */

@@ -1,1 +1,9 @@
-fewaef
+<div class="contact">
+  <form action="" method="POST">
+    <input type="hidden" name="authenticity-token" value="form_authenticity_token">
+    <input type="text" name="message[name]" value="<%= @message.name %>">
+    <input type="text" name="message[email]" value="<%= @message.email %>">
+    <textarea name="message[body]"><%= @contact.value %></textarea>
+
+    <input type="submit" value="Send Message">
+</div>
