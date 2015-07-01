@@ -1,28 +1,13 @@
-== README
+# Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live: [www.karenling.net](http://www.karenling.net)
 
-Things you may want to cover:
+### Simple, Minimalistic Design
 
-* Ruby version
+<img src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/Screen%20Shot%202015-07-01%20at%2011.45.05%20AM.png" width="32%">
+<img src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/Screen%20Shot%202015-07-01%20at%2011.45.12%20AM.png" width="32%">
+<img src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/Screen%20Shot%202015-07-01%20at%2011.45.23%20AM.png" width="32%">
 
-* System dependencies
+### Info
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Built with Rails. Utilizes a simple AJAX post request for submitting messages. 

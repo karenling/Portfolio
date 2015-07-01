@@ -25,24 +25,13 @@ $(document).ready(function(){
   //  dots: true
   // });
 
-  $('.mail').click(function () {
-    $('html, body').stop();
-    $('html, body').animate({
-      scrollTop: $(window).height() * 4
-    }, 1000);
-  });
+
 
   window.setInterval(function () {
     $('.down-arrow').toggleClass('shift-down');
-    // $('.down-arrow').removeClass('shift-down');
   }, 300);
 
   $(window).resize(function () {
-    // var windowWidth = $(window).width();
-    // var mainWidth = windowWidth - 375 - 200;
-    //
-    // $('.work, .work div').css('width', mainWidth);
-
 
     var windowHeight = $(window).height();
     $('.work').height(windowHeight);
@@ -51,27 +40,11 @@ $(document).ready(function(){
     var laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
     $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
-    // 1.74 ratio
 
-
-    $('.down-arrow').click(function () {
-      $('html, body').stop();
-      var scrollPos = $('body').scrollTop();
-      var increment = windowHeight;
-
-      if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
-        increment = windowHeight * 54;
-      }
-      $('html, body').animate({
-        scrollTop: scrollPos += increment
-      }, 100);
-    })
-
+    var currentPos = $('body').scrollTop();
 
     $(window).scroll(function () {
-      var currentPos = $('body').scrollTop();
-      // console.log($('body').height());
-      // console.log(currentPos);
+
       if (currentPos < windowHeight * 3) { // IMPORTANT TO SET THIS TO THE NUMBER OF IMAGES THERE ARE
 
         if (currentPos >= 0 && currentPos < windowHeight) {
@@ -95,6 +68,27 @@ $(document).ready(function(){
         $('.main').css('position', 'absolute');
         $('.main').css('top', windowHeight * 3);
       }
+      //
+      // $('.down-arrow').click(function () {
+      //   $('html, body').stop();
+      //   var scrollPos = $('body').scrollTop();
+      //   var increment = windowHeight;
+      //
+      //   if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
+      //     increment = windowHeight * 54;
+      //   }
+      //   $('html, body').animate({
+      //     scrollTop: scrollPos += increment
+      //   }, 100);
+      // })
+      //
+      // $('.mail').click(function () {
+      //   $('html, body').stop();
+      //   $('html, body').animate({
+      //     scrollTop: $(window).height() * 4
+      //   }, 1000);
+      // });
+
     });
 
     $(window).scroll();
