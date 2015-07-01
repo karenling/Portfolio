@@ -41,10 +41,10 @@ $(document).ready(function(){
     $('.laptop').height(laptopWidth / 1.74);
     $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
 
-    var currentPos = $('body').scrollTop();
+
 
     $(window).scroll(function () {
-
+      var currentPos = $('body').scrollTop();
       if (currentPos < windowHeight * 3) { // IMPORTANT TO SET THIS TO THE NUMBER OF IMAGES THERE ARE
 
         if (currentPos >= 0 && currentPos < windowHeight) {
