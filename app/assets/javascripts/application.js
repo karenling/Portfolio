@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     var windowHeight = $(window).height();
     $('.work2').height(windowHeight);
-    $('body').height(windowHeight*2); // SET THIS
+    $('body').height(windowHeight*4); // SET THIS
 
     var laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
@@ -43,21 +43,24 @@ $(document).ready(function(){
 
     $(window).scroll(function () {
       var currentPos = $('body').scrollTop();
-      if (currentPos < windowHeight * 2) {
+      // console.log($('body').height());
+      // console.log(currentPos);
+      if (currentPos < windowHeight * 3) { // IMPORTANT TO SET THIS TO THE NUMBER OF IMAGES THERE ARE
         $('.main').css('position', 'fixed');
-        if (currentPos < windowHeight) {
-          // show first portfolio
+        if (currentPos >= 0 && currentPos < windowHeight) {
+
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_1.jpg')");
-        }
-        if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
-          // $('.portfolio').fadeOut();
-          // $('.portfolio').fadeIn();
+        } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_2.jpg')");
+        } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
+          $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_3.jpg')");
         }
+      } else {
+        $('.main').css('position', 'relative');
       }
     });
 
-
+    $(window).scroll();
 
   })
 
