@@ -18,6 +18,10 @@
 
 $(window).load(function(){
 
+  window.setInterval(function () {
+    $('.down-arrow').toggleClass('shift-down');
+  }, 300);
+
   $(window).resize(function () {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -58,6 +62,28 @@ $(window).load(function(){
         $('.work').css('top', windowHeight * 3);
         $('.work').css('width', 'Calc(100% - 200px)');
       }
+
+
+        $('.down-arrow').click(function () {
+          $('html, body').stop();
+          var scrollPos = $('body').scrollTop();
+          var increment = windowHeight;
+
+          if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
+            increment = windowHeight * 54;
+          }
+          $('html, body').animate({
+            scrollTop: scrollPos += increment
+          }, 100);
+        })
+
+        $('.mail').click(function () {
+          $('html, body').stop();
+          $('html, body').animate({
+            scrollTop: $(window).height() * 4
+          }, 1000);
+        });
+
     })
 
     $(window).scroll();

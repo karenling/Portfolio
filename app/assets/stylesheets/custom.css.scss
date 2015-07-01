@@ -140,50 +140,48 @@ hr.divider {
         }
       }
     }
-
-    .down-arrow {
-      position: absolute;
-      bottom: 70px;
-      left: 50%;
-      margin-left: -20px;
-      height: 35px;
-      width: 65px;
-      background-color: transparent;
-      -webkit-transition: bottom 800ms linear, opacity 800ms linear; /* Safari */
-      transition: bottom 800ms linear, opacity 800ms linear;
-      .left, .right {
-        position: absolute;
-        top: 15px;
-        height: 3px;
-        width: 40px;
-        background: white;
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-      }
-      .left {
-        left: 0;
-        -ms-transform: rotate(45deg); /* IE 9 */
-        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-        transform: rotate(45deg);
-
-      }
-
-      .right {
-        left: 27px;
-        -ms-transform: rotate(-45deg); /* IE 9 */
-        -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
-        transform: rotate(-45deg);
-      }
-    }
-
-    .shift-down {
-      bottom: -15px;
-      opacity: 0;
-    }
-
-
-
-
   }
+
+  .down-arrow {
+    position: fixed;
+    bottom: 40px;
+    right: Calc(50% - 200px);
+    height: 35px;
+    width: 65px;
+    background-color: transparent;
+    -webkit-transition: bottom 800ms linear, opacity 800ms linear; /* Safari */
+    transition: bottom 800ms linear, opacity 800ms linear;
+    .left, .right {
+      position: absolute;
+      top: 15px;
+      height: 3px;
+      width: 40px;
+      background: white;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    }
+    .left {
+      left: 0;
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+      transform: rotate(45deg);
+
+    }
+
+    .right {
+      left: 27px;
+      -ms-transform: rotate(-45deg); /* IE 9 */
+      -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+      transform: rotate(-45deg);
+    }
+  }
+
+  .shift-down {
+    bottom: 0px;
+    opacity: 0;
+  }
+
+
+
   .contact {
     position: absolute;
     bottom: 0px; // not sure where the remaining 6px is
