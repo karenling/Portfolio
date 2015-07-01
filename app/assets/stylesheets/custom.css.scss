@@ -49,6 +49,11 @@ hr.divider {
   .work {
 
   }
+  .preload {
+    position: absolute;
+    left: -4000px;
+    top: -4000px;
+  }
   .work2 {
     position: relative;
     // background-color: red;
@@ -61,6 +66,19 @@ hr.divider {
       top: 50%;
       left: 50%;
       margin-left: -50%;
+    }
+    .portfolio {
+      position: relative;
+      top: 7.438%;
+      left: 13.3%;
+      width: 74%;
+      height: 500px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      -webkit-transition: background-image 600ms; /* Safari */
+      transition: background-image 600ms;
+
+
     }
   }
 }

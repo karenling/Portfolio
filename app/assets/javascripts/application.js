@@ -32,11 +32,33 @@ $(document).ready(function(){
 
     var windowHeight = $(window).height();
     $('.work2').height(windowHeight);
+    $('body').height(windowHeight*2); // SET THIS
 
     var laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
-    $('.laptop').css('margin-top', laptopWidth / 1.74 / -2)
+    $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
     // 1.74 ratio
+
+
+
+    $(window).scroll(function () {
+      var currentPos = $('body').scrollTop();
+      if (currentPos < windowHeight * 2) {
+        $('.main').css('position', 'fixed');
+        if (currentPos < windowHeight) {
+          // show first portfolio
+          $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_1.jpg')");
+        }
+        if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
+          // $('.portfolio').fadeOut();
+          // $('.portfolio').fadeIn();
+          $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_2.jpg')");
+        }
+      }
+    });
+
+
+
   })
 
   $(window).resize();
