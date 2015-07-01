@@ -1,4 +1,5 @@
 $light-teal: #c3e8e3;
+$teal: #86d3c9;
 $text-color: #a2a2a2;
 @mixin grey-border-button {
   border: 2px solid #efefef;
@@ -66,6 +67,9 @@ hr.divider {
       top: 50%;
       left: 50%;
       margin-left: -50%;
+      &:hover .description {
+        opacity: 1;
+      }
     }
     .portfolio {
       position: absolute;;
@@ -77,14 +81,43 @@ hr.divider {
       background-repeat: no-repeat;
       -webkit-transition: background-image 600ms; /* Safari */
       transition: background-image 600ms;
+
     }
     .description {
+      opacity: 0;
       position: absolute;;
       top: 7.438%;
       left: 13.3%;
       width: 74%;
       height: 83%;
       background-color: rgba(0, 0, 0, 0.8);
+      color: rgba(255, 255, 255, 0.9);
+      -webkit-transition: opacity 600ms; /* Safari */
+      transition: opacity 600ms;
+
+      & a:link, & a:active, & a:visited {
+        color: #fff;
+      }
+      & a:hover {
+        color: $teal;
+      }
+      .content {
+        width: 300px;
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        .title {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.95);
+        }
+        .body {
+          margin-top: 30px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
     }
   }
 }

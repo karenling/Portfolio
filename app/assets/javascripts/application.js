@@ -49,11 +49,13 @@ $(document).ready(function(){
         $('.main').css('position', 'fixed');
         if (currentPos >= 0 && currentPos < windowHeight) {
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_1.jpg')");
-          $('.description').html("hello there!");
+          $('.content').html("Flappy Pig");
         } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_2.jpg')");
+          $('.content').html("<div class='title'><a href='http://twinkieset.com'>Twinkieset <i class='fa fa-external-link'></i></a></div> <div class='body'>Twinkieset is a client photo gallery for modern photographers, inspired by Pixieset, built on Rails and Backbone. Photographers can upload photos and create beautifully designed galleries for their clients. &nbsp;<a href='https://github.com/karenling/Twinkieset'><i class='fa fa-github'></i></a></div>");
         } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
           $('.portfolio').css('background-image', "url('https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/portfolio_image_3.jpg')");
+          $('.content').html("Ruby Checkers");
         }
       } else {
         $('.main').css('position', 'relative');
