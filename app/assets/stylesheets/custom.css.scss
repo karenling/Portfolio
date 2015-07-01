@@ -252,6 +252,10 @@ aside {
         &:last-child {
           margin-right: 0px;
         }
+        i {
+          cursor: pointer;
+          background-color: transparent;
+        }
         & a:link, & a:visited, & a:active {
           color: $light-teal;
           -webkit-transition: color 200ms; /* Safari */
