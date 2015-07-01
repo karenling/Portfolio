@@ -42,6 +42,7 @@ $(document).ready(function(){
     //
     // $('.work, .work div').css('width', mainWidth);
 
+
     var windowHeight = $(window).height();
     $('.work').height(windowHeight);
     $('body').height(windowHeight*4); // SET THIS
@@ -51,6 +52,21 @@ $(document).ready(function(){
     $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
     // 1.74 ratio
 
+
+    $('.down-arrow').click(function () {
+      var scrollPos = $('body').scrollTop();
+      var increment = windowHeight;
+      console.log(windowHeight);
+      console.log(scrollPos);
+
+      if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
+        console.log('here')
+        increment = windowHeight * 54;
+      }
+      $('html, body').animate({
+        scrollTop: scrollPos += increment
+      }, 100);
+    })
 
 
     $(window).scroll(function () {
