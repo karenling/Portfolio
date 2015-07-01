@@ -101,7 +101,7 @@ hr.divider {
       transition: opacity 600ms;
 
       & a:link, & a:active, & a:visited {
-        color: #fff;
+        color: $light-teal;
       }
       & a:hover {
         color: $teal;
@@ -116,6 +116,12 @@ hr.divider {
           letter-spacing: 2px;
           font-weight: 400;
           color: rgba(255, 255, 255, 0.95);
+          & a:link, & a:active, & a:visited {
+            color: #fff;
+          }
+          & a:hover {
+            color: $teal;
+          }
         }
         .icons {
           margin-top: 10px;
