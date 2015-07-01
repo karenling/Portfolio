@@ -38,7 +38,7 @@
         console.log(response)
         $('.submit-message').prop('disabled', false);
         $('.errors').fadeIn();
-        $('.errors').html(response.responseJSON.join(". "));
+        $('.errors').html(response.responseJSON.join(". ") + ".");
       }
     });
 
