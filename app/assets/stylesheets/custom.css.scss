@@ -129,7 +129,7 @@ hr.divider {
     position: absolute;
     top: 300%;
     bottom: 0px;
-    height: Calc(100% - 200px);
+    height: Calc(100% - 184px); // not sure where the remaining 6px is
     width: Calc(100% - 200px);
     padding: 100px;
     background-color: #222;
