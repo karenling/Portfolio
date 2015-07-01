@@ -16,19 +16,27 @@
 //= require_tree .
 
 $(document).ready(function(){
-  $('.work').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-   dots: true
-  });
+  // $('.work').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 1000,
+  //  dots: true
+  // });
 
   $(window).resize(function () {
-    var windowWidth = $(window).width();
-    var mainWidth = windowWidth - 375 - 200;
+    // var windowWidth = $(window).width();
+    // var mainWidth = windowWidth - 375 - 200;
+    //
+    // $('.work, .work div').css('width', mainWidth);
 
-    $('.work, .work div').css('width', mainWidth);
+    var windowHeight = $(window).height();
+    $('.work2').height(windowHeight);
+
+    var laptopWidth = $('.laptop').width();
+    $('.laptop').height(laptopWidth / 1.74);
+    $('.laptop').css('margin-top', laptopWidth / 1.74 / -2)
+    // 1.74 ratio
   })
 
   $(window).resize();
