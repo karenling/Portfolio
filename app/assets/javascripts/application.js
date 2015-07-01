@@ -26,6 +26,7 @@ $(document).ready(function(){
   // });
 
   $('.mail').click(function () {
+    $('html, body').stop();
     $('html, body').animate({
       scrollTop: $(window).height() * 4
     }, 1000);
@@ -54,13 +55,11 @@ $(document).ready(function(){
 
 
     $('.down-arrow').click(function () {
+      $('html, body').stop();
       var scrollPos = $('body').scrollTop();
       var increment = windowHeight;
-      console.log(windowHeight);
-      console.log(scrollPos);
 
       if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
-        console.log('here')
         increment = windowHeight * 54;
       }
       $('html, body').animate({
