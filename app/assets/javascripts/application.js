@@ -16,12 +16,12 @@
 //= require_tree .
 
 $(document).ready(function(){
-
   $('.work').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1000,
+   dots: true
   });
 
   $(window).resize(function () {
@@ -32,6 +32,4 @@ $(document).ready(function(){
   })
 
   $(window).resize();
-
-
 });
