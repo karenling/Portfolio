@@ -1,5 +1,8 @@
 <div class="contact">
 
+  <% if flash[:errors] %>
+    <%= flash[:errors] %>
+    <% end %>
   <div class="title">Get In Touch</div>
   <hr class="divider"/>
   <form class="message-form">
