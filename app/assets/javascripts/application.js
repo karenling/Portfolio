@@ -53,19 +53,27 @@ $(document).ready(function(){
       // console.log($('body').height());
       // console.log(currentPos);
       if (currentPos < windowHeight * 3) { // IMPORTANT TO SET THIS TO THE NUMBER OF IMAGES THERE ARE
-        $('.main').css('position', 'fixed');
+
         if (currentPos >= 0 && currentPos < windowHeight) {
+          $('.main').css('position', 'fixed');
+          $('.main').css('top', 0);
           $('.portfolio').css('background-image', "url('http://images.karenling.net/aa/portfolio/portfolio_image_1.jpg')");
           $('.portfolio').html("<div class='description'><div class='content'><div class='title'><a href='http://flappypig.karenling.net/'>FlappyPig <i class='fa fa-external-link'></i></a></div> <div class='body'>Highly addictive video game, inspired by Flappy Bird, BUT with a flying pig! I built the game using JavaScript and HTML5 Canvas. &nbsp;<a href='http://github.com/karenling/Flappy-Pig'><i class='fa fa-github'></i></a></div></div></div>");
         } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
+          $('.main').css('position', 'fixed');
+          $('.main').css('top', 0);
           $('.portfolio').css('background-image', "url('http://images.karenling.net/aa/portfolio/portfolio_image_2.jpg')");
           $('.portfolio').html("<div class='description'><div class='content'><div class='title'><a href='http://twinkieset.com'>Twinkieset <i class='fa fa-external-link'></i></a></div> <div class='body'>Twinkieset is a client photo gallery for modern photographers, inspired by Pixieset, built on Rails and Backbone. Photographers can upload photos and create beautifully designed galleries for their clients. &nbsp;<a href='http://github.com/karenling/Twinkieset'><i class='fa fa-github'></i></a></div></div></div>");
         } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
+          $('.main').css('position', 'fixed');
+          $('.main').css('top', 0);
           $('.portfolio').css('background-image', "url('http://images.karenling.net/aa/portfolio/portfolio_image_3.jpg')");
           $('.portfolio').html("<div class='description'><div class='content'><div class='title'><a href='http://github.com/karenling/chess'>Ruby Chess <i class='fa fa-external-link'></i></a></div> <div class='body'>Terminal chess implementation, written in Ruby. &nbsp;<a href='http://github.com/karenling/chess'><i class='fa fa-github'></i></a></div></div></div>");
+
         }
       } else {
         $('.main').css('position', 'absolute');
+        $('.main').css('top', windowHeight*3);
       }
     });
 
