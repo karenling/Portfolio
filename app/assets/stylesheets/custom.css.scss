@@ -149,7 +149,7 @@ hr.divider {
 
   .down-arrow {
     position: fixed;
-    bottom: 40px;
+    bottom: 70px;
     right: Calc(50% - 200px);
     height: 35px;
     width: 65px;
@@ -159,10 +159,10 @@ hr.divider {
     .left, .right {
       position: absolute;
       top: 15px;
-      height: 3px;
+      height: 4px;
       width: 40px;
-      background: white;
-      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
     }
     .left {
       left: 0;
@@ -181,7 +181,7 @@ hr.divider {
   }
 
   .shift-down {
-    bottom: 0px;
+    bottom: 10px;
     opacity: 0;
   }
 

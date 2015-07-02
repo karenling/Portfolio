@@ -81,15 +81,24 @@ $(window).load(function(){
 
         $('.down-arrow').click(function () {
           $('html, body').stop();
+          var bodyHtml = $('body').height();
           var scrollPos = $('body').scrollTop();
-          var increment = windowHeight;
-
+          var increment;
+          if (scrollPos < windowHeight/2) {
+            increment = bodyHtml * .17;
+          } else if (scrollPos >= windowHeight/2 && scrollPos < windowHeight * 1.5) {
+            increment = bodyHtml * .40;
+          } else if (scrollPos >= windowHeight *1.5 && scrollPos < windowHeight * 2.5) {
+            increment = bodyHtml * .60;
+          }
+          console.log(increment);
           if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
             increment = windowHeight * 54;
           }
           $('html, body').animate({
-            scrollTop: scrollPos += increment
+            scrollTop: increment
           }, 1000);
+
         })
 
         $('.mail').click(function () {
