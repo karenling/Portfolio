@@ -87,9 +87,9 @@ hr.divider {
       background-repeat: no-repeat;
       -webkit-transition: background-image 600ms; /* Safari */
       transition: background-image 600ms;
-      &:hover .description {
-        opacity: 0.9;
-      }
+      // &:hover .description {
+      //   opacity: 0.9;
+      // }
     }
 
     .description {
@@ -149,7 +149,7 @@ hr.divider {
 
   .down-arrow {
     position: fixed;
-    bottom: 70px;
+    bottom: 40px;
     right: Calc(50% - 200px);
     height: 35px;
     width: 65px;
