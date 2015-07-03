@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       msg = MessageMailer.notification_email(@message.name, @message.email, @message.body)
-      msg.deliver_now
+      msg.deliver_later
       render json: @message, status: :ok
     else
       render json: @message.errors.full_messages, status: :unprocessable_entity
