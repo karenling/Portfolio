@@ -155,8 +155,8 @@ hr.divider {
     width: 65px;
     background-color: transparent;
     cursor: pointer;
-    -webkit-transition: bottom 800ms linear, opacity 800ms linear; /* Safari */
-    transition: bottom 800ms linear, opacity 800ms linear;
+    -webkit-transition: bottom 800ms ease, opacity 800ms linear; /* Safari */
+    transition: bottom 800ms ease, opacity 800ms linear;
     .left, .right {
       position: absolute;
       top: 15px;
