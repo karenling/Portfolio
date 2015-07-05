@@ -18,6 +18,8 @@
 
 $(window).load(function(){
 
+  $('.down-arrow').removeClass('start-position');
+  
   window.setInterval(function () {
     $('.down-arrow').toggleClass('shift-down');
   }, 300);

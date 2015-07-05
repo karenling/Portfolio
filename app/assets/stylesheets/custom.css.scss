@@ -149,8 +149,8 @@ hr.divider {
 
   .down-arrow {
     position: fixed;
-    bottom: 40px;
-    right: Calc(50% - 200px);
+    bottom: 60px;
+    right: Calc(50% - 220px);
     height: 35px;
     width: 65px;
     background-color: transparent;
@@ -181,6 +181,11 @@ hr.divider {
     }
   }
 
+  .start-position {
+    bottom: 90%;
+    -webkit-transition: bottom 200ms linear; /* Safari */
+    transition: bottom 200ms linear;
+  }
   .shift-down {
     bottom: 10px;
     opacity: 0;
