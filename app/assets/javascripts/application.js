@@ -16,7 +16,13 @@
 //= require_tree .
 //= require jquery.serializejson
 
+$(document).ready(function () {
+  $('.contact').hide();
+})
+
 $(window).load(function(){
+
+  $('.contact').show();
 
   $('.down-arrow').removeClass('start-position');
 
