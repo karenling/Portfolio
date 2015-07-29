@@ -6,20 +6,44 @@
 </div>
 
 
+
 <div class="work">
   <div class="laptop"></div>
+
   <div class="work-carousel">
-    <div class="portfolio portfolio-1">your content</div>
-    <div class="portfolio portfolio-2">your content</div>
-    <div class="portfolio portfolio-3">your content</div>
+    <div class="portfolio portfolio-1">
+      <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
+
+    </div>
+    <div class="portfolio portfolio-2">
+      <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
+    </div>
+    <div class="portfolio portfolio-3">
+      <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
+    </div>
   </div>
 </div>
 
 <script type="text/javascript">
   $(document).ready(function(){
     $('.work-carousel').slick({
-      infinite: true
+      infinite: true,
     });
+
+
+    function playCurrentvideo () {
+      video = $('.slick-current').find('video').get(0)
+      video.play();
+    }
+
+    playCurrentvideo();
+
+
+    $('.work-carousel').on('afterChange', function () {
+      playCurrentvideo();
+    })
+
+
   });
 </script>
 <!-- <div class="work portfolio-1">
