@@ -18,6 +18,8 @@
 
 
 $(window).load(function () {
+
+
   $(window).resize(function () {
     windowHeight = $(window).height();
     $('.work').height(windowHeight);
