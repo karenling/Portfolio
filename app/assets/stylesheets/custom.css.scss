@@ -81,23 +81,39 @@ hr.divider {
       position: absolute;
       top: 50%;
       left: 50%;
-      background: red;
     }
 
     .portfolio {
-      position: absolute;
-      top: 7.3%;
-      left: 13%;
-      width: 74%;
-      height: 83%;
       background-size: 100%;
+      height: 100%;
       background-repeat: no-repeat;
-      -webkit-transition: background-image 600ms; /* Safari */
-      transition: background-image 600ms;
-      &:hover .description {
-        opacity: 0.9;
+      &.portfolio-1 {
+        background-image: url('http://images.karenling.net/aa/portfolio/portfolio_image_1.jpg');
+      }
+      &.portfolio-2 {
+        background-image: url('http://images.karenling.net/aa/portfolio/portfolio_image_2.jpg');
+      }
+      &.portfolio-3 {
+        background-image: url('http://images.karenling.net/aa/portfolio/portfolio_image_3.jpg');
       }
     }
+
+
+
+    // .portfolio {
+    //   position: absolute;
+    //   top: 7.3%;
+    //   left: 13%;
+    //   width: 74%;
+    //   height: 83%;
+    //   background-size: 100%;
+    //   background-repeat: no-repeat;
+    //   -webkit-transition: background-image 600ms; /* Safari */
+    //   transition: background-image 600ms;
+    //   &:hover .description {
+    //     opacity: 0.9;
+    //   }
+    // }
 
     .description {
       opacity: 0;

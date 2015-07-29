@@ -29,7 +29,7 @@ $(window).load(function () {
 
     carouselWidth = $('.work-carousel').width();
     console.log(carouselWidth)
-    $('.work-carousel').height(carouselWidth / 1.55);
+    $('.work-carousel, .portfolio').height(carouselWidth / 1.55);
     $('.work-carousel').css('margin-top', carouselWidth / 1.55 / (-2));
     $('.work-carousel').css('margin-left', carouselWidth / (-2));
   })
