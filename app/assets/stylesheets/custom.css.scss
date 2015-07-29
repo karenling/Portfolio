@@ -126,6 +126,12 @@ hr.divider {
       top: 20px;
       right: 20px;
       z-index: 1;
+      color: #fff;
+      opacity: 0.5;
+      font-size: 30px;
+      .hide-button {
+        display: none;
+      }
     }
     .description {
       opacity: 0;

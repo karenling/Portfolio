@@ -14,7 +14,10 @@
     <div class="portfolio portfolio-1">
       <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
 
-      <div class="more-info">Info</div>
+      <div class="more-info">
+        <i class="fa fa-info-circle info"></i>
+        <i class="fa fa-times close-description hide-button"></i>
+      </div>
       <div class='description'>
         <div class='content'>
           <div class='title'>
@@ -35,7 +38,10 @@
     <div class="portfolio portfolio-2">
       <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
 
-      <div class="more-info">Info</div>
+      <div class="more-info">
+        <i class="fa fa-info-circle info"></i>
+        <i class="fa fa-times close-description hide-button"></i>
+      </div>
       <div class='description'>
         <div class='content'>
           <div class='title'><a href='http://twinkieset.com'>Twinkieset <i class='fa fa-external-link'></i></a></div>
@@ -53,7 +59,10 @@
     <div class="portfolio portfolio-3">
       <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
 
-      <div class="more-info">Info</div>
+      <div class="more-info">
+        <i class="fa fa-info-circle info"></i>
+        <i class="fa fa-times close-description hide-button"></i>
+      </div>
       <div class='description'>
         <div class='content'>
           <div class='title'><a href='http://github.com/karenling/chess'>Ruby Chess <i class='fa fa-external-link'></i></a></div>
@@ -72,18 +81,19 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('.work-carousel').slick({
-      infinite: true,
+      infinite: true
     });
 
     function playCurrentvideo () {
-      video = $('.slick-current').find('video').get(0)
+      video = $('.slick-current').find('video').get(0);
       video.play();
     }
 
     function addInfoListener () {
-      info = $('.slick-current').find('.more-info')
+      info = $('.slick-current').find('.more-info');
       info.on('click', function () {
-        $(this).next().toggleClass('make-opaque')
+        $(this).next().toggleClass('make-opaque');
+        $(this).find('i').toggleClass('hide-button');
       })
     }
 
@@ -93,6 +103,10 @@
     $('.work-carousel').on('afterChange', function () {
       // playCurrentvideo();
       addInfoListener();
+      setTimeout(function() {
+        addInfoListener();
+      }, 300)
+
     })
 
 
