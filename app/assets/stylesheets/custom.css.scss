@@ -129,6 +129,13 @@ hr.divider {
       color: #fff;
       opacity: 0.5;
       font-size: 30px;
+      .info {
+        font-family: serif;
+        padding-right: 5px;
+      }
+      .close-description {
+        font-style: normal;
+      }
       .hide-button {
         display: none;
       }

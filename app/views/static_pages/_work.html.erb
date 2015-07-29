@@ -15,8 +15,8 @@
       <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
 
       <div class="more-info">
-        <i class="fa fa-info-circle info"></i>
-        <i class="fa fa-times close-description hide-button"></i>
+        <i class="info">i</i>
+        <i class="close-description hide-button">&#10005;</i>
       </div>
       <div class='description'>
         <div class='content'>
@@ -39,8 +39,8 @@
       <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
 
       <div class="more-info">
-        <i class="fa fa-info-circle info"></i>
-        <i class="fa fa-times close-description hide-button"></i>
+        <i class="info">i</i>
+        <i class="close-description hide-button">&#10005;</i>
       </div>
       <div class='description'>
         <div class='content'>
@@ -60,8 +60,8 @@
       <video autoplay loop src="https://dl.dropboxusercontent.com/u/2330299/capstone/portfolio/video-portfolio-1.mov" type="video/mov"></video>
 
       <div class="more-info">
-        <i class="fa fa-info-circle info"></i>
-        <i class="fa fa-times close-description hide-button"></i>
+        <i class="info">i</i>
+        <i class="close-description hide-button">&#10005;</i>
       </div>
       <div class='description'>
         <div class='content'>
@@ -80,33 +80,34 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.work-carousel').slick({
-      infinite: true
-    });
+    $('.work-carousel').slick();
 
     function playCurrentvideo () {
+      $('video').each(function(idx, vid) {
+        vid.pause()
+      });
       video = $('.slick-current').find('video').get(0);
       video.play();
     }
 
     function addInfoListener () {
       info = $('.slick-current').find('.more-info');
-      info.on('click', function () {
+      // remove all events from more-info to prevent multiple calls
+      $('.more-info').off('click');
+      info.on('click', function (e) {
+        console.log('here')
         $(this).next().toggleClass('make-opaque');
         $(this).find('i').toggleClass('hide-button');
       })
+
     }
 
-    // playCurrentvideo();
+    playCurrentvideo();
     addInfoListener();
 
-    $('.work-carousel').on('afterChange', function () {
-      // playCurrentvideo();
+    $('.work-carousel').on('afterChange', function (e) {
+      playCurrentvideo();
       addInfoListener();
-      setTimeout(function() {
-        addInfoListener();
-      }, 300)
-
     })
 
 
