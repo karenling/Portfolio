@@ -34,7 +34,6 @@ hr.divider {
   left: 375px;
   padding: 0;
   width: Calc(100% - 375px);
-  min-width: 675px;
   -webkit-transition: position 10s; /* Safari */
   transition: position 10s;
   .recent-post {
@@ -57,26 +56,34 @@ hr.divider {
     top: -4000px;
   }
 
+
+
   .work {
     min-height: 450px;
-    // position: fixed;
-    position: absolute;
-    top: 0px;
-    right: 50px;
     margin: auto auto;
-    width: Calc(100% - 375px - 200px);
     padding: 0 50px;
+    position: relative;
     // background-color: red;
+
+
     .laptop {
-      width: 100%;
+      width: Calc(100% - 100px);
       background-image: url('http://images.karenling.net/aa/portfolio/mac_laptop.png');
       background-size: 100%;
       background-repeat: no-repeat;
       position: absolute;
       top: 50%;
       left: 50%;
-      margin-left: -50%;
     }
+
+    .work-carousel {
+      width: Calc(74% - 80px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: red;
+    }
+
     .portfolio {
       position: absolute;
       top: 7.3%;

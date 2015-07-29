@@ -16,111 +16,132 @@
 //= require_tree .
 //= require jquery.serializejson
 
-$(document).ready(function () {
-  $('.contact').hide();
-})
 
-$(window).load(function(){
-
-  $('.contact').show();
-
-  $('.down-arrow').removeClass('start-position');
-
-  window.setInterval(function () {
-    $('.down-arrow').toggleClass('shift-down');
-  }, 300);
-
+$(window).load(function () {
   $(window).resize(function () {
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
+    windowHeight = $(window).height();
     $('.work').height(windowHeight);
-    $('.contact').height(windowHeight - 200);
-    $('body').height(windowHeight*4); // SET THIS
-    $('.contact').css('top', windowHeight*4);
-
-    $('.laptop').width(windowWidth - 375 - 100);
-    var laptopWidth = $('.laptop').width();
+    laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
-    $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
+    laptopHeight = $('.laptop').height();
+    $('.laptop').css('margin-top', laptopHeight/(-2));
+    $('.laptop').css('margin-left', laptopWidth/(-2));
 
-    $(window).scroll(function () {
-      var currentPos = $('body').scrollTop();
-      $('.laptop').height(laptopWidth / 1.74);
-      if (currentPos < windowHeight * 3) {
-        $('.work').css('position', 'fixed');
-        $('.work').css('top', 0);
-      }
-      if (currentPos < windowHeight) {
-
-        $('.work').hide();
-        $('.portfolio-1').show();
-        $('.work').css('width', 'Calc(100% - 375px - 200px)');
-        if (currentPos > windowHeight/5 && currentPos < windowHeight * 4/5) {
-          $('.description').addClass('make-opaque');
-        } else {
-          $('.description').removeClass('make-opaque');
-        }
-      } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
-
-        $('.work').hide();
-        $('.portfolio-2').show();
-        $('.work').css('width', 'Calc(100% - 375px - 200px)');
-        if (currentPos > (windowHeight + windowHeight/5) && currentPos < (windowHeight + windowHeight * 4/5)) {
-          $('.description').addClass('make-opaque');
-        } else {
-          $('.description').removeClass('make-opaque');
-        }
-      } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
-
-        $('.work').hide();
-        $('.portfolio-3').show();
-        $('.work').css('width', 'Calc(100% - 375px - 200px)');
-        if (currentPos > (windowHeight*2 + windowHeight/5) && currentPos < (windowHeight*2 + windowHeight * 4/5)) {
-          $('.description').addClass('make-opaque');
-        } else {
-          $('.description').removeClass('make-opaque');
-        }
-      } else {
-        $('.work').css('position', 'absolute');
-        $('.work').css('top', windowHeight * 3);
-        $('.work').css('width', 'Calc(100% - 200px)');
-      }
-
-
-      $('.down-arrow').click(function () {
-        $('html, body').stop();
-        var bodyHtml = $('body').height();
-        var scrollPos = $('body').scrollTop();
-        var increment;
-        if (scrollPos < windowHeight/2) {
-          increment = bodyHtml * .17;
-        } else if (scrollPos >= windowHeight/2 && scrollPos < windowHeight * 1.5) {
-          increment = bodyHtml * .40;
-        } else if (scrollPos >= windowHeight *1.5 && scrollPos < windowHeight * 2.5) {
-          increment = bodyHtml * .60;
-        }
-        console.log(increment);
-        if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
-          increment = windowHeight * 54;
-        }
-        $('html, body').animate({
-          scrollTop: increment
-        }, 1000);
-
-      })
-
-      $('.mail').click(function () {
-        $('html, body').stop();
-        $('html, body').animate({
-          scrollTop: $(window).height() * 4
-        }, 1000);
-      });
-
-    })
-
-    $(window).scroll();
-
+    carouselWidth = $('.work-carousel').width();
+    console.log(carouselWidth)
+    $('.work-carousel').height(carouselWidth / 1.55);
+    $('.work-carousel').css('margin-top', carouselWidth / 1.55 / (-2));
+    $('.work-carousel').css('margin-left', carouselWidth / (-2));
   })
 
   $(window).resize();
-});
+})
+//
+// $(document).ready(function () {
+//   $('.contact').hide();
+// })
+//
+// $(window).load(function(){
+//
+//   $('.contact').show();
+//
+//   $('.down-arrow').removeClass('start-position');
+//
+//   window.setInterval(function () {
+//     $('.down-arrow').toggleClass('shift-down');
+//   }, 300);
+//
+//   $(window).resize(function () {
+//     var windowWidth = $(window).width();
+//     var windowHeight = $(window).height();
+//     $('.work').height(windowHeight);
+//     $('.contact').height(windowHeight - 200);
+//     $('body').height(windowHeight*4); // SET THIS
+//     $('.contact').css('top', windowHeight*4);
+//
+//     $('.laptop').width(windowWidth - 375 - 100);
+//     var laptopWidth = $('.laptop').width();
+//     $('.laptop').height(laptopWidth / 1.74);
+//     $('.laptop').css('margin-top', laptopWidth / 1.74 / -2);
+//
+//     $(window).scroll(function () {
+//       var currentPos = $('body').scrollTop();
+//       $('.laptop').height(laptopWidth / 1.74);
+//       if (currentPos < windowHeight * 3) {
+//         $('.work').css('position', 'fixed');
+//         $('.work').css('top', 0);
+//       }
+//       if (currentPos < windowHeight) {
+//
+//         $('.work').hide();
+//         $('.portfolio-1').show();
+//         $('.work').css('width', 'Calc(100% - 375px - 200px)');
+//         if (currentPos > windowHeight/5 && currentPos < windowHeight * 4/5) {
+//           $('.description').addClass('make-opaque');
+//         } else {
+//           $('.description').removeClass('make-opaque');
+//         }
+//       } else if (currentPos >= windowHeight && currentPos < windowHeight * 2) {
+//
+//         $('.work').hide();
+//         $('.portfolio-2').show();
+//         $('.work').css('width', 'Calc(100% - 375px - 200px)');
+//         if (currentPos > (windowHeight + windowHeight/5) && currentPos < (windowHeight + windowHeight * 4/5)) {
+//           $('.description').addClass('make-opaque');
+//         } else {
+//           $('.description').removeClass('make-opaque');
+//         }
+//       } else if (currentPos >= windowHeight * 2 && currentPos < windowHeight * 3) {
+//
+//         $('.work').hide();
+//         $('.portfolio-3').show();
+//         $('.work').css('width', 'Calc(100% - 375px - 200px)');
+//         if (currentPos > (windowHeight*2 + windowHeight/5) && currentPos < (windowHeight*2 + windowHeight * 4/5)) {
+//           $('.description').addClass('make-opaque');
+//         } else {
+//           $('.description').removeClass('make-opaque');
+//         }
+//       } else {
+//         $('.work').css('position', 'absolute');
+//         $('.work').css('top', windowHeight * 3);
+//         $('.work').css('width', 'Calc(100% - 200px)');
+//       }
+//
+//
+//       $('.down-arrow').click(function () {
+//         $('html, body').stop();
+//         var bodyHtml = $('body').height();
+//         var scrollPos = $('body').scrollTop();
+//         var increment;
+//         if (scrollPos < windowHeight/2) {
+//           increment = bodyHtml * .17;
+//         } else if (scrollPos >= windowHeight/2 && scrollPos < windowHeight * 1.5) {
+//           increment = bodyHtml * .40;
+//         } else if (scrollPos >= windowHeight *1.5 && scrollPos < windowHeight * 2.5) {
+//           increment = bodyHtml * .60;
+//         }
+//         console.log(increment);
+//         if ((scrollPos >= windowHeight * 2) && (scrollPos < windowHeight * 3)) {
+//           increment = windowHeight * 54;
+//         }
+//         $('html, body').animate({
+//           scrollTop: increment
+//         }, 1000);
+//
+//       })
+//
+//       $('.mail').click(function () {
+//         $('html, body').stop();
+//         $('html, body').animate({
+//           scrollTop: $(window).height() * 4
+//         }, 1000);
+//       });
+//
+//     })
+//
+//     $(window).scroll();
+//
+//   })
+//
+//   $(window).resize();
+// });
