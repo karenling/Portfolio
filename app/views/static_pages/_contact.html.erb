@@ -30,14 +30,12 @@
       dataType: "json",
       data: formData,
       success: function (response) {
-        console.log(response);
         $('.submit-message').prop('disabled', false);
         $('.message-form input#message-name, .message-form input#message-email, .message-form textarea').val("");
         $('.notice').fadeIn();
         $('.notice').html("Thank you, " + response.name + ". Message sent!");
       },
       error: function (response) {
-        console.log(response)
         $('.submit-message').prop('disabled', false);
         $('.errors').fadeIn();
         $('.errors').html(response.responseJSON.join(". ") + ".");

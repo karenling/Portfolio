@@ -89,11 +89,9 @@
       // remove all events from more-info to prevent multiple calls
       $('.more-info').off('click');
       info.on('click', function (e) {
-        console.log('here')
         $(this).next().toggleClass('make-opaque');
         $(this).find('i').toggleClass('hide-button');
-      })
-
+      });
     }
 
     playCurrentvideo();
@@ -102,11 +100,7 @@
     $('.work-carousel').on('afterChange', function (e) {
       playCurrentvideo();
       addInfoListener();
-    })
-
-
-
-
+    });
 
   });
 </script>
