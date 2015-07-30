@@ -16,8 +16,13 @@
 //= require_tree .
 //= require jquery.serializejson
 
-
+console.log("ready1")
+$(document).ready(function () {
+  windowHeight = $(window).height();
+  $('.loading').height(windowHeight);
+})
 $(window).load(function () {
+  $('.loading').fadeOut();
   $('.mail').click(function () {
     $('.contact').show();
     $('.work').hide();
