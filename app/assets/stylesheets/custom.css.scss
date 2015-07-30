@@ -196,59 +196,26 @@ hr.divider {
   }
 
 
-  .down-arrow {
-    position: fixed;
-    bottom: 60px;
-    right: Calc(50% - 220px);
-    height: 35px;
-    width: 65px;
-    background-color: transparent;
-    cursor: pointer;
-    -webkit-transition: bottom 800ms ease, opacity 800ms linear; /* Safari */
-    transition: bottom 800ms ease, opacity 800ms linear;
-    .left, .right {
-      position: absolute;
-      top: 15px;
-      height: 5px;
-      width: 40px;
-      background: #fff;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-    }
-    .left {
-      left: 0;
-      -ms-transform: rotate(45deg); /* IE 9 */
-      -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-      transform: rotate(45deg);
-
-    }
-
-    .right {
-      left: 25px;
-      -ms-transform: rotate(-45deg); /* IE 9 */
-      -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
-      transform: rotate(-45deg);
-    }
-  }
-
-  .start-position {
-    bottom: 90%;
-    -webkit-transition: bottom 200ms linear; /* Safari */
-    transition: bottom 200ms linear;
-  }
-  .shift-down {
-    bottom: 10px;
-    opacity: 0;
-  }
-
 
 
   .contact {
     position: absolute;
-    bottom: 0px; // not sure where the remaining 6px is
     width: Calc(100% - 200px);
-    padding: 100px;
+    padding: 0 100px;
     background-color: #222;
     text-align: center;
+
+    .close-contact {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 30px;
+      -webkit-transition: color 200ms;
+      transition: color 200ms;
+      &:hover {
+        color: #fff;
+      }
+    }
     .container {
       position: absolute;
       top: 50%;

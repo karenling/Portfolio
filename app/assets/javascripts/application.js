@@ -18,11 +18,19 @@
 
 
 $(window).load(function () {
+  $('.mail').click(function () {
+    $('.contact').show();
+    $('.work').hide();
+  });
 
+  $('.close-contact').click(function () {
+    $('.contact').hide();
+    $('.work').show();
+  })
 
   $(window).resize(function () {
     windowHeight = $(window).height();
-    $('.work').height(windowHeight);
+    $('.work, .contact').height(windowHeight);
     laptopWidth = $('.laptop').width();
     $('.laptop').height(laptopWidth / 1.74);
     laptopHeight = $('.laptop').height();
