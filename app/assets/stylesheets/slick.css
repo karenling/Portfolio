@@ -77,11 +77,12 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -90px;
+    height: 80px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: -60px;
     left: auto;
 }
 .slick-prev:before
@@ -89,8 +90,8 @@
     content: '〈';
     font-size:60px;
     position: relative;
-    top: -20px;
-    left: -90px;
+    top: 0px;
+    left: -25px;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -99,20 +100,21 @@
 
 .slick-next
 {
-    right: -25px;
+    right: -80px;
+    height: 80px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: -70px;
 }
 .slick-next:before
 {
     content: '〉';
     font-size:60px;
     position: relative;
-    top: -20px;
-    left: 50px;
+    top: 0px;
+    left: -5px;
 }
 [dir='rtl'] .slick-next:before
 {
