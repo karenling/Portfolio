@@ -14,6 +14,7 @@ body {
   color: $text-color;
   font-weight: 300;
   background-color: #f5f5f5;
+  margin: 0;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 a {
@@ -28,10 +29,10 @@ hr.divider {
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
 }
+.flex {
+  display: flex;
+}
 .main {
-  position: absolute;
-  top: 0px;
-  left: 375px;
   padding: 0;
   width: Calc(100% - 375px);
   -webkit-transition: position 10s; /* Safari */
@@ -178,10 +179,6 @@ hr.divider {
       opacity: 0.9;
     }
   }
-
-
-
-
   .contact {
     position: absolute;
     width: Calc(100% - 200px);
@@ -267,12 +264,10 @@ hr.divider {
   }
 }
 aside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   min-height: 450px;
-  width: Calc(375px - 100px);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
   background-image: url('http://images.karenling.net/aa/portfolio/bg.jpg');
   background-size: 375px;
   color: #fff;
@@ -302,10 +297,8 @@ aside {
     margin-top: 10px;
   }
   footer {
-    position: absolute;
-    width: Calc(100% - 100px);
-    bottom: 15px;
     color: $light-teal;
+    align-self: flex-end;
     ul.icons {
       font-size: 42px;
       margin-bottom: 20px;
@@ -335,5 +328,19 @@ aside {
     copyright {
       font-size: 12px;
     }
+  }
+}
+
+@media (max-width: 740px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+  aside {
+    width: 100%;
+  }
+}
+@media (min-width: 740px) {
+  aside {
+    width: Calc(375px - 100px);
   }
 }
