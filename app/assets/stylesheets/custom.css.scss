@@ -30,11 +30,12 @@ hr.divider {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-.main {
+.main {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   padding: 0;
-  width: Calc(100% - 375px);
   -webkit-transition: position 10s; /* Safari */
   transition: position 10s;
   .recent-post {
@@ -56,17 +57,11 @@ hr.divider {
     left: -4000px;
     top: -4000px;
   }
-
-
-
-  .work {
+  .work {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     min-height: 450px;
     margin: auto auto;
     padding: 0 50px;
     position: relative;
-    // background-color: red;
-
-
     .laptop {
       width: Calc(100% - 100px);
       background-image: url('http://images.karenling.net/aa/portfolio/mac_laptop.gif');
@@ -112,6 +107,7 @@ hr.divider {
       z-index: 1;
       color: #fff;
       opacity: 0.5;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
       font-size: 30px;
       cursor: pointer;
       .info {
@@ -127,6 +123,7 @@ hr.divider {
     }
     .description {
       opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       position: absolute;
       top: 0;
       left: 0;
@@ -177,6 +174,7 @@ hr.divider {
     }
     .make-opaque {
       opacity: 0.9;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     }
   }
   .contact {
@@ -264,9 +262,14 @@ hr.divider {
   }
 }
 aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 450px;
   background-image: url('http://images.karenling.net/aa/portfolio/bg.jpg');
   background-size: 375px;
@@ -298,7 +301,8 @@ aside {
   }
   footer {
     color: $light-teal;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     ul.icons {
       font-size: 42px;
       margin-bottom: 20px;
@@ -333,14 +337,21 @@ aside {
 
 @media (max-width: 740px) {
   .flex {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   aside {
+    width: 100%;
+  }
+  .main {
     width: 100%;
   }
 }
 @media (min-width: 740px) {
   aside {
     width: Calc(375px - 100px);
+  }
+  .main {
+    width: Calc(100% - 375px);
   }
 }
