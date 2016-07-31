@@ -1,3 +1,5 @@
+@import 'flexbox';
+
 $light-teal: #c3e8e3;
 $teal: #86d3c9;
 $text-color: #a2a2a2;
@@ -9,7 +11,11 @@ $text-color: #a2a2a2;
   background: #fff;
   font: 16px 'Lato';
 }
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   font: 16px 'Lato';
   color: $text-color;
   font-weight: 300;
@@ -30,9 +36,8 @@ hr.divider {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  @include flexbox;
+  height: 100%;
 }
 .main {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   padding: 0;
@@ -58,25 +63,30 @@ hr.divider {
     top: -4000px;
   }
   .work {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    min-height: 450px;
-    margin: auto auto;
-    padding: 0 50px;
+    width: Calc(78% - 100px);
+    height: Calc(100vh - 100px);
+    padding-top: 50px;
+    padding-bottom: 50px;
     position: relative;
+    margin: auto;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
     .laptop {
-      width: Calc(100% - 100px);
-      background-image: url('http://images.karenling.net/aa/portfolio/mac_laptop.gif');
+      width: 100%;
+      height: 100%;
+      background-image: url("http://images.karenling.net/aa/portfolio/mac_laptop.gif");
       background-size: 100%;
+      background-position: center;
       background-repeat: no-repeat;
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      position: relative;
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
     }
-
     .work-carousel {
-      width: Calc(74% - 80px);
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      // background-color: red;
+      width: 74%;
     }
 
     .portfolio {
@@ -262,14 +272,9 @@ hr.divider {
   }
 }
 aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
   min-height: 450px;
   background-image: url('http://images.karenling.net/aa/portfolio/bg.jpg');
   background-size: 375px;
@@ -301,8 +306,7 @@ aside {
   }
   footer {
     color: $light-teal;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    @include align-self(flex-end);
     ul.icons {
       font-size: 42px;
       margin-bottom: 20px;
@@ -334,11 +338,12 @@ aside {
     }
   }
 }
-
+.work-carousel.slick-initialized.slick-slider {
+  margin: 0;
+}
 @media (max-width: 740px) {
   .flex {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    @include flex-wrap(wrap);
   }
   aside {
     width: 100%;

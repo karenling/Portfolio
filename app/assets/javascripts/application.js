@@ -32,20 +32,20 @@ $(window).load(function () {
     $('.work').show();
   })
 
-  $(window).resize(function () {
-    windowHeight = $(window).height();
-    $('.work, .contact').height(windowHeight);
-    laptopWidth = $('.laptop').width();
-    $('.laptop').height(laptopWidth / 1.74);
-    laptopHeight = $('.laptop').height();
-    $('.laptop').css('margin-top', laptopHeight/(-2));
-    $('.laptop').css('margin-left', laptopWidth/(-2));
-
-    carouselWidth = $('.work-carousel').width();
-    $('.work-carousel, .portfolio').height(carouselWidth / 1.55);
-    $('.work-carousel').css('margin-top', carouselWidth / 1.55 / (-2));
-    $('.work-carousel').css('margin-left', carouselWidth / (-2));
-  })
+  // $(window).resize(function () {
+  //   windowHeight = $(window).height();
+  //   $('.work, .contact').height(windowHeight);
+  //   laptopWidth = $('.laptop').width();
+  //   $('.laptop').height(laptopWidth / 1.74);
+  //   laptopHeight = $('.laptop').height();
+  //   $('.laptop').css('margin-top', laptopHeight/(-2));
+  //   $('.laptop').css('margin-left', laptopWidth/(-2));
+  //
+  //   carouselWidth = $('.work-carousel').width();
+  //   $('.work-carousel, .portfolio').height(carouselWidth / 1.55);
+  //   $('.work-carousel').css('margin-top', carouselWidth / 1.55 / (-2));
+  //   $('.work-carousel').css('margin-left', carouselWidth / (-2));
+  // })
 
   $(window).resize();
 })
