@@ -188,12 +188,14 @@ hr.divider {
     }
   }
   .contact {
-    position: absolute;
-    width: Calc(100% - 200px);
-    padding: 0 100px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    height: Calc(100% - 100px);
+    padding: 50px 100px;
     background-color: #222;
     text-align: center;
-
+    position: relative;
     .close-contact {
       position: absolute;
       top: 30px;
@@ -201,23 +203,16 @@ hr.divider {
       font-size: 30px;
       -webkit-transition: color 200ms;
       transition: color 200ms;
+      cursor: pointer;
       &:hover {
         color: #fff;
       }
-    }
-    .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -195px;
-      margin-left: -268px;
     }
     .notice {
       display: none;
       padding-top: 10px;
       font-size: 14px;
       color: $light-teal;
-
     }
     .errors {
       display: none;
@@ -243,18 +238,19 @@ hr.divider {
     }
     input#message-name, input#message-email {
       margin-top: 25px;
-      width: 222px;
+      width: Calc(50% - 45px);
     }
     input#message-name {
       margin-right: 25px;
-      margin-left: 1px;
+      // margin-left: 1px;
     }
     textarea#message-body {
       display: block;
       margin: auto auto;
-      width: 500px;
+      width: Calc(100% - 32px);
       height: 100px;
       margin-top: 25px;
+      resize: none;
     }
     .submit-message {
       text-transform: uppercase;
@@ -265,6 +261,7 @@ hr.divider {
       background: #86d3c9;
       font: 14px 'Lato';
       margin-top: 25px;
+      cursor: pointer;
       &:hover {
         background: $light-teal;
       }
