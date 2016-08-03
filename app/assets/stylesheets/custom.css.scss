@@ -348,6 +348,9 @@ aside {
   .main {
     width: 100%;
   }
+  .work .more-info, .work .description {
+    display: none;
+  }
 }
 @media (min-width: 740px) {
   aside {
