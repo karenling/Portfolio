@@ -132,6 +132,9 @@ hr.divider {
       }
     }
     .description {
+      @include flexbox;
+      @include align-items(flex-end);
+      overflow: scroll;
       opacity: 0;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       position: absolute;
@@ -151,10 +154,10 @@ hr.divider {
         color: $teal;
       }
       .content {
-        width: 300px;
-        position: absolute;
-        left: 50px;
-        bottom: 50px;
+        max-width: 300px;
+        padding: 30px;
+        margin-top: auto;
+        overflow: scroll;
         .title {
           text-transform: uppercase;
           letter-spacing: 2px;
@@ -347,9 +350,6 @@ aside {
   }
   .main {
     width: 100%;
-  }
-  .work .more-info, .work .description {
-    display: none;
   }
 }
 @media (min-width: 740px) {
